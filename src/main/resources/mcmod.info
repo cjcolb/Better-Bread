@@ -1,15 +1,15 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
+  "modid": "betterbread",
+  "name": "Better Bread",
+  "description": "Making bread a bit more exciting",
+  "version": "VERSION",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
+  "authorList": ["tooSecsy"],
+  "credits": "Some guy that might be tooSecsy",
+  "logoFile": "src/main/resources/bread.png",
   "screenshots": [],
   "dependencies": []
 }

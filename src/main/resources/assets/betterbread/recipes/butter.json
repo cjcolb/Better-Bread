@@ -1,0 +1,17 @@
+{ 
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+	  "item": "minecraft:milk_bucket",
+	  "data": 0
+	},
+	{
+	  "item": "betterbread:salt",
+	  "data": 0
+	}
+  ],
+  "result": {
+    "item": "betterbread:butter",
+    "data": 0
+  }
+}

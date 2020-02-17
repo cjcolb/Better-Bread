@@ -5,6 +5,10 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.secsy.betterbread.gen.OreGen;
 import com.secsy.betterbread.init.ModBlocks;
 import com.secsy.betterbread.init.ModItems;
 import com.secsy.betterbread.init.ModRecipes;
@@ -25,11 +29,15 @@ public class BetterBread {
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println(MODID + " :preInit");
 		
+		//Hey Howdy hey, this is a test...
+		
 		ModItems.init();
 		ModBlocks.init();
 		ModRecipes.init();
-		
+				
 		CraftingHandler.removeRecipes();
+		
+		GameRegistry.registerWorldGenerator(new OreGen(), 0);
 	}
 
 	@EventHandler
@@ -41,4 +49,5 @@ public class BetterBread {
 	public void postInit(FMLPreInitializationEvent event) {
 		System.out.println(MODID + " :postInit");
 	}
+
 }

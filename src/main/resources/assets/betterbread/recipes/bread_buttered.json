@@ -1,0 +1,17 @@
+{ 
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+	  "item": "minecraft:bread",
+	  "data": 0
+	},
+	{
+	  "item": "betterbread:butter",
+	  "data": 0
+	}
+  ],
+  "result": {
+    "item": "betterbread:bread_buttered",
+    "data": 0
+  }
+}

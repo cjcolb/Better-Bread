@@ -1,7 +1,6 @@
 package com.secsy.betterbread.init;
 
 import com.secsy.betterbread.BetterBread;
-import com.secsy.betterbread.blocks.BlockBasic;
 import com.secsy.betterbread.blocks.BlockOre;
 
 import net.minecraft.block.Block;
@@ -18,26 +17,26 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid=BetterBread.MODID)
 public class ModBlocks {
 
-	public static Block saltBlock;
+	public static Block salt_ore;
 	
 	public static void init() {
-		saltBlock = new BlockOre("salt_ore", Material.ROCK, ModItems.salt, 3).setHardness(1.5f);
-		saltBlock.setHarvestLevel("pickaxe", 1);
+		salt_ore = new BlockOre("salt_ore", Material.ROCK, ModItems.salt, 3).setHardness(1.5f);
+		salt_ore.setHarvestLevel("pickaxe", 1);
 	}
 	
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().registerAll(saltBlock);
+		event.getRegistry().registerAll(salt_ore);
 	}
 	
 	@SubscribeEvent
 	public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(new ItemBlock(saltBlock).setRegistryName(saltBlock.getRegistryName()));
+		event.getRegistry().registerAll(new ItemBlock(salt_ore).setRegistryName(salt_ore.getRegistryName()));
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		registerRender(Item.getItemFromBlock(saltBlock));
+		registerRender(Item.getItemFromBlock(salt_ore));
 	}
 	
 	public static void registerRender(Item item) {

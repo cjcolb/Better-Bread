@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.secsy.betterbread.BetterBread;
 import com.secsy.betterbread.items.ItemBasic;
+import com.secsy.betterbread.items.ItemCustomFood;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -20,6 +21,7 @@ public class ModItems {
 	public static Item flour;
 	public static Item dough;
 	public static Item butter;
+	public static Item butteredBread;
 	
 	private static ArrayList<Item> items = new ArrayList<Item>();
 	
@@ -32,7 +34,8 @@ public class ModItems {
 		items.add(dough);
 		butter = new ItemBasic("butter");
 		items.add(butter);
-		
+		butteredBread = new ItemCustomFood("bread_buttered", 6, false);	
+		items.add(butteredBread);
 	}
 	
 	@SubscribeEvent
